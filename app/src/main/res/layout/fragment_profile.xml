@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/accname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+        android:drawablePadding="10dp"
+        android:shadowColor="@color/black"
+        android:text="Janitha Sudharaka"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/ord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_bookmark_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Orders"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_below="@+id/accname"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/fav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_favorite_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Favourites"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_below="@+id/ord"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_account_balance_wallet_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Wallet"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_below="@+id/fav"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_help_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Help"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_below="@+id/wallet"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/promo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Promotions"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_below="@+id/help"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_settings_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Settings"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_below="@+id/promo"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+
+        />
+
+
+
+
+
+
+
+</RelativeLayout>
