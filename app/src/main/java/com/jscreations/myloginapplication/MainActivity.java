@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     Boolean checkuserpass = DB.checkusernamepassword(user,pass);
                     if(checkuserpass == true){
+//                        this is from order Management
                         Toast.makeText(MainActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), ProfilePage.class);
                         startActivity(intent);
