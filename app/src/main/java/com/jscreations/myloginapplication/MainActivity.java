@@ -9,18 +9,31 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText username, password;
+    private FirebaseAuth mAuth;
+
+    EditText email, password;
     Button loginbtn;
-    DBHelper DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth = FirebaseAuth.getInstance();
+        if (mAuth.getCurrentUser() != null){
+            finish();
+            return;
+        }
 
         TextView textView = findViewById(R.id.forgetpass);
         TextView textView1 = findViewById(R.id.register);
@@ -42,31 +55,47 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        username = findViewById(R.id.username1);
-        password = findViewById(R.id.password1);
+
         loginbtn = findViewById(R.id.loginbtn1);
-        DB = new DBHelper(this);
+
+
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user = username.getText().toString();
-                String pass = password.getText().toString();
 
-                if(TextUtils.isEmpty(user) || TextUtils.isEmpty(pass))
-                    Toast.makeText(MainActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
-                else {
-                    Boolean checkuserpass = DB.checkusernamepassword(user,pass);
-                    if(checkuserpass == true){
-                        Toast.makeText(MainActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), ProfilePage.class);
-                        startActivity(intent);
-                    }else {
-                        Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                    }
-                }
+                authenticateUser();
             }
         });
 
     }
+
+    private  void  authenticateUser(){
+
+        email = findViewById(R.id.username1);
+        password = findViewById(R.id.password1);
+        String eml = email.getText().toString();
+        String pass = password.getText().toString();
+
+        if(TextUtils.isEmpty(eml) || TextUtils.isEmpty(pass))
+            Toast.makeText(MainActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
+        mAuth.signInWithEmailAndPassword(eml, pass)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            showMainActivity();
+                        } else {
+                            Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+    }
+    private void showMainActivity(){
+        Intent intent = new Intent(this, ProfilePage.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
