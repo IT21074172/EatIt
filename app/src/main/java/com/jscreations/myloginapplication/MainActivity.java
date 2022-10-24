@@ -56,11 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(user) || TextUtils.isEmpty(pass))
                     Toast.makeText(MainActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
                 else {
+
                     Boolean checkuserpass = DB.checkusernamepassword(user,pass);
                     if(checkuserpass == true){
-//                        this is from order Management
+                    //this is from order Management
+
                         Toast.makeText(MainActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), ProfilePage.class);
+                        Intent intent = new Intent(getApplicationContext(), Profile.class);
                         startActivity(intent);
                     }else {
                         Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
