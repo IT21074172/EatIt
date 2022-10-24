@@ -47,6 +47,9 @@ public class Profile extends AppCompatActivity {
                     case R.id.profileFragment:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,profileFragment).commit();
                         return true;
+
+                    default:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,homeFragment).commit();
                 }
 
                 return false;
