@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
 
-    private EditText username, email,password;
+    EditText username, email,password;
     Button regbtn;
 
 
@@ -40,10 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser() != null){
-            finish();
-            return;
-        }
+
 
         regbtn = findViewById(R.id.regbtn);
         regbtn.setOnClickListener(new View.OnClickListener() {
@@ -68,51 +65,61 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void registerUser() {
-        username = findViewById(R.id.username);
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
-
         String uname = username.getText().toString();
         String eml = email.getText().toString();
         String pass = password.getText().toString();
 
-        if (uname.isEmpty() || eml.isEmpty() || pass.isEmpty()){
-            Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show();
+        if (uname.isEmpty()){
+            username.setError("Username is required");
+            username.requestFocus();
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(eml).matches()){
-            email.setError("Please select valid email");
+
+        if (eml.isEmpty()){
+            email.setError("Email is required");
             email.requestFocus();
             return;
         }
-        if(pass.length() < 6){
-            password.setError("Min password length should be 6 characters");
+
+        if (pass.isEmpty()){
+            password.setError("Password is required");
             password.requestFocus();
             return;
         }
 
-        mAuth.createUserWithEmailAndPassword(uname, eml)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        if (!Patterns.EMAIL_ADDRESS.matcher(eml).matches()){
+            email.setError("Please provide valid email");
+            email.requestFocus();
+            return;
+        }
+
+        if (pass.length()<6){
+            password.setError("Min password length is 6 characters");
+            password.requestFocus();
+            return;
+        }
+
+        mAuth.createUserWithEmailAndPassword(eml,pass)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Users user = new Users(uname, eml);
+                        if (task.isSuccessful()){
+                            Users user = new Users(uname,eml);
+
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        Toast.makeText(RegisterActivity.this, "Registered Successful", Toast.LENGTH_SHORT).show();
-                                        showMainActivity();
-                                    }else {
-                                        Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+                                    }else{
+                                        Toast.makeText(RegisterActivity.this, "Failed, Try again", Toast.LENGTH_SHORT).show();
                                     }
-
                                 }
                             });
                         }else {
-                            Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Failed, Try again", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

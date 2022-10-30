@@ -3,6 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.2301801801801802" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2301801801801802" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.2301801801801802" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_add_item.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_add_new_location.xml" value="0.2" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_address_list.xml" value="0.10990990990990991" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_cart.xml" value="0.20405405405405405" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_edit_profile.xml" value="0.4" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_forget_password.xml" value="0.264" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_home.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_insertdata.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_items.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_list_menu.xml" value="0.2" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_main.xml" value="0.20512820512820512" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_profile.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_profile_page.xml" value="0.264" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_promotions.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_search.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/activity_updata_order.xml" value="0.264" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/addressentry.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/fragment_cart.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/fragment_home.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/fragment_profile.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/fragment_search.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/layout/itementry.xml" value="0.21621621621621623" />
+        <entry key="..\:/Andro projects/MyLoginApplication/app/src/main/res/menu/menu_nav.xml" value="0.21621621621621623" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.31837606837606836" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/drawable/ic_baseline_bookmark_border_24.xml" value="0.31837606837606836" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.31837606837606836" />
@@ -10,12 +37,16 @@
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/drawable/ic_baseline_person_blck.xml" value="0.31837606837606836" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_edit_profile.xml" value="0.30512820512820515" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_forget_password.xml" value="0.30512820512820515" />
+        <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_help.xml" value="0.23846153846153847" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_insertdata.xml" value="0.2935897435897436" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_landing_page.xml" value="0.30512820512820515" />
+        <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_list_menu.xml" value="0.23846153846153847" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_profile.xml" value="0.1683760683760684" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_profile_page.xml" value="0.2935897435897436" />
+        <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_promotions.xml" value="0.23846153846153847" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/activity_settings.xml" value="0.22692307692307692" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/fragment_cart.xml" value="0.1683760683760684" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/fragment_home.xml" value="0.1683760683760684" />
         <entry key="..\:/Android_studio_projects/MyLoginApplication/app/src/main/res/layout/fragment_profile.xml" value="0.33" />

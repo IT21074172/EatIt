@@ -1,0 +1,17 @@
+package com.jscreations.myloginapplication;
+
+public class AddressID {
+    String id;
+
+    public AddressID(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+}
