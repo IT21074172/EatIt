@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateNewOrder"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Assign Orders to Riders"
+        android:layout_marginBottom="25dp"
+        android:textSize="30dp"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/assignorders"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"/>
+
+    <TextView
+        android:id="@+id/lblforOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the Order"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/txtOrderNamefrm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblforOrder"
+        android:inputType="textPersonName"
+        />
+    <TextView
+        android:id="@+id/lblforRider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the Rider"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/txtRiderNamefrm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblforOrder"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/lblforSpecial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Special Instructions"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/txtSpecialfrm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblforOrder"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+
+        />
+    <Button
+        android:id="@+id/btnsaveDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Details"
+        android:elevation="20dp"/>
+
+
+</LinearLayout>

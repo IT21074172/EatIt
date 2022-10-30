@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderManagement"
+    android:layout_margin="30dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Order Management"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"/>
+    <ImageView
+        android:id="@+id/imageManagement"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/management"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageManagement"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp">
+
+    <Button
+        android:id="@+id/btnViewAllOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="20dp"
+        android:padding="20dp"
+        android:text="View All Orders" />
+
+    <Button
+        android:id="@+id/btnAssignOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewAllOrders"
+        android:layout_centerHorizontal="true"
+        android:elevation="20dp"
+        android:padding="20dp"
+        android:text="Assign An Order" />
+    </LinearLayout>
+
+</RelativeLayout>

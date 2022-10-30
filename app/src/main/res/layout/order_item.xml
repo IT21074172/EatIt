@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/layoutOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Order Name"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtOrderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/nameText"
+            android:text="OrderName"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/layoutTtwo"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+            android:layout_below="@id/layoutOne">
+
+        <TextView
+            android:id="@+id/RiderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-1dp"
+            android:text="Rider Name"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+        android:id="@+id/txtRiderName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-1dp"
+        android:layout_toRightOf="@+id/AddressText"
+        android:text="Rider Name"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/specialIns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RiderName"
+            android:layout_marginLeft="10dp"
+            android:text="Instructions"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+            <TextView
+            android:id="@+id/txtInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf = '@+id/statusText'
+            android:layout_marginLeft="10dp"
+            android:text="Instructions"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
